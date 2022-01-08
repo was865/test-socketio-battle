@@ -216,7 +216,8 @@ app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, '/static/3d.html'));
 });
 
-const port = parseInt(yargs.port) || 3000;
+// const port = parseInt(yargs.port) || 3000;
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log(`Starting server on port ${port}`);
 });
